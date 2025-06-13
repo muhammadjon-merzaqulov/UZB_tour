@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+{% block title %}{{ destination.name }} - UzbTour{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-image">
+            <img src="{{ destination.image.url }}" alt="{{ destination.name }}">
+            <div class="page-hero-overlay"></div>
+        </div>
+
+        <div class="page-hero-content">
+            <div class="container text-center">
+                <h1>{{ destination.name }}</h1>
+                <span class="badge bg-primary">{{ destination.category.name }}</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Details -->
+    <section class="destination-details py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="destination-content bg-white p-4 rounded shadow-sm">
+                        <div class="destination-description mb-4">
+                            {{ destination.description|linebreaks }}
+                        </div>
+
+                        <div class="destination-meta">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <strong>{% trans "Category:" %}</strong> {{ destination.category.name }}
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <strong>{% trans "Last Updated:" %}</strong> {{ destination.updated_at|date:"F j, Y" }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="destination-actions mt-4">
+                            <a href="{% url 'destinations:list' %}" class="btn btn-outline-primary">
+                                <i class="fas fa-arrow-left me-2"></i> {% trans "Back to Destinations" %}
+                            </a>
+                            <a href="{% url 'tours:list' %}" class="btn btn-primary ms-2">
+                                {% trans "Browse Tours" %} <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+{% block title %}{% trans "About Us" %} - UzbTour{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-image">
+            <img src="{% static 'images/about-hero.jpg' %}" alt="{% trans 'About UzbTour' %}">
+            <div class="page-hero-overlay"></div>
+        </div>
+
+        <div class="page-hero-content">
+            <div class="container text-center">
+                <h1>{% trans "About Us" %}</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-right">
+                    <div class="about-card">
+                        <h2>{{ mission.title }}</h2>
+                        <p>{{ mission.description }}</p>
+                        <img src="{% static 'images/mission.jpg' %}" alt="{{ mission.title }}" class="img-fluid rounded mt-3">
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4" data-aos="fade-left">
+                    <div class="about-card">
+                        <h2>{{ vision.title }}</h2>
+                        <p>{{ vision.description }}</p>
+                        <img src="{% static 'images/vision.jpg' %}" alt="{{ vision.title }}" class="img-fluid rounded mt-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">{% trans "Our Team" %}</h2>
+                    <p class="section-description" data-aos="fade-up" data-aos-delay="100">
+                        {% trans "Meet the passionate individuals dedicated to making your Uzbekistan journey unforgettable." %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                {% for member in team_members %}
+                    <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'-1'|multiply:100 }}">
+                        <div class="team-card">
+                            <div class="team-image">
+                                <img src="{{ member.image.url }}" alt="{{ member.name }}">
+                            </div>
+                            <div class="team-content">
+                                <h3>{{ member.name }}</h3>
+                                <p class="team-role">{{ member.role }}</p>
+                                <p class="team-bio">{{ member.bio|truncatewords:20 }}</p>
+                                <div class="team-social">
+                                    {% if member.twitter %}
+                                        <a href="{{ member.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    {% endif %}
+                                    {% if member.linkedin %}
+                                        <a href="{{ member.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                    {% endif %}
+                                    {% if member.instagram %}
+                                        <a href="{{ member.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="col-12 text-center">
+                        <p>{% trans "No team members found." %}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Company History -->
+    <section class="history-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">{% trans "Our History" %}</h2>
+                </div>
+            </div>
+
+            <div class="timeline">
+                {% for event in history %}
+                    <div class="timeline-item {% if forloop.counter|divisibleby:2 %}right{% else %}left{% endif %}" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'-1'|multiply:100 }}">
+                        <div class="timeline-badge">{{ event.year }}</div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>{{ event.title }}</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>{{ event.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="col-12 text-center">
+                        <p>{% trans "No history events found." %}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

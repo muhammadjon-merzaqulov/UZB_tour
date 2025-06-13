@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load custom_filters %}
+
+{% block title %}{{ tour.name }} - UzbTour{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-image">
+            <img src="{{ tour.image.url }}" alt="{{ tour.name }}">
+            <div class="page-hero-overlay"></div>
+        </div>
+
+        <div class="page-hero-content">
+            <div class="container text-center">
+                <h1>{{ tour.name }}</h1>
+                <span class="badge bg-primary">{{ tour.category.name }}</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Details -->
+    <section class="tour-details py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="tour-content bg-white p-4 rounded shadow-sm">
+                        <div class="tour-meta mb-4">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="tour-meta-item">
+                                        <i class="far fa-clock me-2 text-primary"></i>
+                                        <span><strong>{% trans "Duration:" %}</strong> {{ tour.duration }} {% trans "days" %}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="tour-meta-item">
+                                        <i class="fas fa-tag me-2 text-primary"></i>
+                                        <span><strong>{% trans "Price:" %}</strong> ${{ tour.price }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tour-description mb-4">
+                            <h3>{% trans "Description" %}</h3>
+                            {{ tour.description|linebreaks }}
+                        </div>
+
+                        <div class="tour-highlights mb-4">
+                            <h3>{% trans "Highlights" %}</h3>
+                            {{ tour.highlights|linebreaks }}
+                        </div>
+
+                        <div class="tour-actions mt-4">
+                            <a href="{% url 'tours:list' %}" class="btn btn-outline-primary">
+                                <i class="fas fa-arrow-left me-2"></i> {% trans "Back to Tours" %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="tour-inquiry bg-white p-4 rounded shadow-sm">
+                        <h3>{% trans "Tour Inquiry" %}</h3>
+                        <form method="post" action="{% url 'tours:inquiry' tour.slug %}">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <button type="submit" class="btn btn-primary w-100 mt-3">{% trans "Submit Inquiry" %}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

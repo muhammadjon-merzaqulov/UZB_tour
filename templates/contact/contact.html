@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load custom_filters %}
+
+{% block title %}{% trans "Contact Us" %} - UzbTour{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-image">
+            <img src="{% static 'images/contact-hero.jpg' %}" alt="{% trans 'Contact UzbTour' %}">
+            <div class="page-hero-overlay"></div>
+        </div>
+
+        <div class="page-hero-content">
+            <div class="container text-center">
+                <h1>{% trans "Contact Us" %}</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-8 mb-4" data-aos="fade-right">
+                    <div class="contact-form bg-white p-4 rounded shadow-sm">
+                        <h2>{% trans "Send Us a Message" %}</h2>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <button type="submit" class="btn btn-primary">{% trans "Send Message" %}</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4 mb-4" data-aos="fade-left">
+                    <div class="contact-info bg-white p-4 rounded shadow-sm">
+                        <h2>{% trans "Contact Information" %}</h2>
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <div>
+                                <h3>{% trans "Address" %}</h3>
+                                <p>123 Tourism Street, Tashkent, Uzbekistan</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone text-primary"></i>
+                            <div>
+                                <h3>{% trans "Phone" %}</h3>
+                                <p>+998 71 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <div>
+                                <h3>{% trans "Email" %}</h3>
+                                <p>info@uzbtour.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock text-primary"></i>
+                            <div>
+                                <h3>{% trans "Working Hours" %}</h3>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="row mt-4">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="contact-map bg-white p-4 rounded shadow-sm">
+                        <h2>{% trans "Find Us" %}</h2>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191885.50264869964!2d69.13928276729939!3d41.28251254703772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2sTashkent%2C%20Uzbekistan!5e0!3m2!1sen!2sus!4v1623825884463!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQs -->
+            <div class="row mt-5">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="section-title" data-aos="fade-up">{% trans "Frequently Asked Questions" %}</h2>
+                </div>
+
+                <div class="col-12">
+                    <div class="accordion" id="faqAccordion">
+                        {% for faq in faqs %}
+                            <div class="accordion-item" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'-1'|multiply:100 }}">
+                                <h2 class="accordion-header" id="heading{{ faq.id }}">
+                                    <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ faq.id }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="collapse{{ faq.id }}">
+                                        {{ faq.question }}
+                                    </button>
+                                </h2>
+                                <div id="collapse{{ faq.id }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ faq.id }}" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        {{ faq.answer|linebreaks }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <div class="text-center">
+                                <p>{% trans "No FAQs found." %}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

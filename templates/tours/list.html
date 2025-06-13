@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+{% block title %}{% trans "Tours & Packages" %} - UzbTour{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-image">
+            <img src="{% static 'images/tours-hero.jpg' %}" alt="{% trans 'Tours in Uzbekistan' %}">
+            <div class="page-hero-overlay"></div>
+        </div>
+
+        <div class="page-hero-content">
+            <div class="container text-center">
+                <h1>{% trans "Tours & Packages" %}</h1>
+                <p>{% trans "Find your perfect Uzbekistan experience" %}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours-section py-5">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-buttons text-center mb-5">
+                <a href="{% url 'tours:list' %}" class="btn {% if not current_category %}btn-primary{% else %}btn-outline-primary{% endif %} me-2 mb-2">
+                    {% trans "All Tours" %}
+                </a>
+
+                {% for category in categories %}
+                    <a href="{% url 'tours:list' %}?category={{ category.slug }}" class="btn {% if current_category == category.slug %}btn-primary{% else %}btn-outline-primary{% endif %} me-2 mb-2">
+                        {{ category.name }}
+                    </a>
+                {% endfor %}
+            </div>
+
+            <!-- Tours Grid -->
+            <div class="row">
+                {% for tour in tours %}
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'-1'|multiply:100 }}">
+                        <div class="tour-card">
+                            <div class="tour-image">
+                                <img src="{{ tour.image.url }}" alt="{{ tour.name }}">
+                                <div class="tour-overlay">
+                                    <a href="{% url 'tours:detail' tour.slug %}" class="btn btn-sm btn-light">{% trans "View Details" %}</a>
+                                </div>
+                                <div class="tour-price">
+                                    <span>${{ tour.price }}</span>
+                                </div>
+                            </div>
+                            <div class="tour-content">
+                                <h3>{{ tour.name }}</h3>
+                                <div class="tour-meta">
+                                    <span><i class="far fa-clock me-1"></i> {{ tour.duration }} {% trans "days" %}</span>
+                                    <span><i class="far fa-folder me-1"></i> {{ tour.category.name }}</span>
+                                </div>
+                                <p class="mt-2">{{ tour.description|truncatewords:15 }}</p>
+                                <a href="{% url 'tours:detail' tour.slug %}" class="btn btn-primary btn-sm mt-2">{% trans "Inquiry" %}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="col-12 text-center">
+                        <p>{% trans "No tours found." %}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

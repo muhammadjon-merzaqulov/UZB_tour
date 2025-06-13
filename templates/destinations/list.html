@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+{% block title %}{% trans "Destinations" %} - UzbTour{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-image">
+            <img src="{% static 'images/destinations-hero.jpg' %}" alt="{% trans 'Destinations in Uzbekistan' %}">
+            <div class="page-hero-overlay"></div>
+        </div>
+
+        <div class="page-hero-content">
+            <div class="container text-center">
+                <h1>{% trans "Explore Destinations" %}</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations-section py-5">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-buttons text-center mb-5">
+                <a href="{% url 'destinations:list' %}" class="btn {% if not current_category %}btn-primary{% else %}btn-outline-primary{% endif %} me-2 mb-2">
+                    {% trans "All" %}
+                </a>
+
+                {% for category in categories %}
+                    <a href="{% url 'destinations:list' %}?category={{ category.slug }}" class="btn {% if current_category == category.slug %}btn-primary{% else %}btn-outline-primary{% endif %} me-2 mb-2">
+                        {{ category.name }}
+                    </a>
+                {% endfor %}
+            </div>
+
+            <!-- Destinations Grid -->
+            <div class="row">
+                {% for destination in destinations %}
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'-1'|multiply:100 }}">
+                        <div class="destination-card">
+                            <div class="destination-image">
+                                <img src="{{ destination.image.url }}" alt="{{ destination.name }}">
+                                <div class="destination-overlay">
+                                    <a href="{% url 'destinations:detail' destination.slug %}" class="btn btn-sm btn-light">{% trans "Read More" %}</a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>{{ destination.name }}</h3>
+                                <span class="badge bg-primary">{{ destination.category.name }}</span>
+                                <p class="mt-2">{{ destination.description|truncatewords:20 }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="col-12 text-center">
+                        <p>{% trans "No destinations found." %}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

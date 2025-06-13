@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "tours": "Tours & Packages",
+    "gallery": "Gallery",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Discover Uzbekistan",
+      "subtitle": "Experience the beauty and culture of the Silk Road",
+      "cta1": "Explore Destinations",
+      "cta2": "Contact Us"
+    },
+    "intro": {
+      "title": "Welcome to Uzbekistan",
+      "description": "Uzbekistan is a country with a rich history, stunning architecture, and warm hospitality. From the ancient cities of Samarkand and Bukhara to the modern capital of Tashkent, Uzbekistan offers travelers a unique blend of cultural experiences."
+    },
+    "featured": {
+      "title": "Featured Destinations",
+      "viewAll": "View All Destinations"
+    }
+  },
+  "destinations": {
+    "title": "Explore Destinations",
+    "filters": {
+      "all": "All",
+      "historical": "Historical",
+      "nature": "Nature",
+      "cultural": "Cultural"
+    }
+  },
+  "tours": {
+    "title": "Tours & Packages",
+    "subtitle": "Find your perfect Uzbekistan experience",
+    "duration": "Duration",
+    "price": "Price",
+    "days": "days",
+    "inquiry": "Inquiry",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Submit Inquiry"
+    }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "filters": {
+      "all": "All",
+      "nature": "Nature",
+      "culture": "Culture",
+      "people": "People",
+      "food": "Food"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide unforgettable travel experiences in Uzbekistan while promoting sustainable tourism and supporting local communities."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become the leading tourism company in Uzbekistan, known for exceptional service and authentic cultural experiences."
+    },
+    "team": {
+      "title": "Our Team"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to our newsletter for the latest updates and offers.",
+      "placeholder": "Your email address",
+      "submit": "Subscribe"
+    },
+    "copyright": "© 2023 Uzbekistan Tourism. All rights reserved."
+  }
+}

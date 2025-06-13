@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "destinations": "Yo'nalishlar",
+    "tours": "Turlar va Paketlar",
+    "gallery": "Galereya",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa"
+  },
+  "home": {
+    "hero": {
+      "title": "O'zbekistonning go'zalligini kashf eting",
+      "subtitle": "Boy tarix, ajoyib me'morchilik va samimiy mehmondo'stlikni his qiling",
+      "cta1": "Yo'nalishlarni ko'rish",
+      "cta2": "Biz bilan bog'laning"
+    },
+    "intro": {
+      "title": "O'zbekistonga xush kelibsiz",
+      "description": "Markaziy Osiyoning qoq markazida joylashgan O'zbekiston sayohatchilar uchun tarixiy Ipak yo'li bo'ylab qadimgi sivilizatsiyalarni ko'rish imkonini beradi. Samarqandning ajoyib me'morchiligidan tortib Xivaning cho'l qal'alarigacha, mamlakatimiz o'rganilishi kerak bo'lgan madaniy va tabiiy mo'jizalar xazinasi hisoblanadi."
+    },
+    "featured": {
+      "title": "Mashhur yo'nalishlar",
+      "viewAll": "Barcha yo'nalishlarni ko'rish"
+    }
+  },
+  "destinations": {
+    "title": "O'zbekistonni kashf eting",
+    "subtitle": "Mamlakatimizning eng go'zal joylarini kashf eting",
+    "filters": {
+      "all": "Hammasi",
+      "historical": "Tarixiy",
+      "nature": "Tabiat",
+      "cultural": "Madaniy"
+    },
+    "readMore": "Batafsil"
+  },
+  "tours": {
+    "title": "Turlar va Paketlar",
+    "subtitle": "Sarguzashtingiz uchun mukammal turni toping",
+    "filters": {
+      "all": "Barcha turlar",
+      "popular": "Mashhur",
+      "adventure": "Sarguzasht",
+      "cultural": "Madaniy",
+      "family": "Oilaviy"
+    },
+    "duration": "Davomiyligi",
+    "days": "kun",
+    "from": "Narxi",
+    "inquire": "So'rov yuborish",
+    "form": {
+      "title": "Tur haqida so'rov",
+      "name": "To'liq ism",
+      "email": "Elektron pochta",
+      "phone": "Telefon raqami",
+      "date": "Afzal sana",
+      "message": "Xabaringiz",
+      "submit": "So'rov yuborish"
+    }
+  },
+  "gallery": {
+    "title": "Galereya",
+    "subtitle": "O'zbekiston bo'ylab vizual sayohat",
+    "filters": {
+      "all": "Hammasi",
+      "nature": "Tabiat",
+      "culture": "Madaniyat",
+      "people": "Odamlar",
+      "food": "Taom"
+    }
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "mission": {
+      "title": "Bizning vazifamiz",
+      "description": "Mahalliy an'analarga hurmat ko'rsatadigan va mahalliy jamoalarni qo'llab-quvvatlaydigan unutilmas sayohat tajribalarini taqdim etish orqali O'zbekistonning go'zalligi va madaniy boyligini namoyish etish."
+    },
+    "vision": {
+      "title": "Bizning ko'rinishimiz",
+      "description": "O'zbekistonda ajoyib xizmat, haqiqiy tajriba va barqaror turizm amaliyoti bilan tanilgan yetakchi turizm kompaniyasiga aylanish."
+    },
+    "team": {
+      "title": "Bizning jamoa",
+      "description": "O'zbekiston bo'ylab sayohatingizni unutilmas qilishga bag'ishlangan ishtiyoqli shaxslar bilan tanishing."
+    }
+  },
+  "contact": {
+    "title": "Biz bilan bog'laning",
+    "subtitle": "Sizdan eshitishni xohlaymiz",
+    "form": {
+      "name": "Ismingiz",
+      "email": "Elektron pochta",
+      "subject": "Mavzu",
+      "message": "Xabaringiz",
+      "submit": "Xabar yuborish"
+    },
+    "info": {
+      "address": "Manzil",
+      "phone": "Telefon",
+      "email": "Elektron pochta"
+    }
+  },
+  "footer": {
+    "quickLinks": "Tezkor havolalar",
+    "subscribe": {
+      "title": "Bizning yangiliklarimizga obuna bo'ling",
+      "placeholder": "Elektron pochta manzilingiz",
+      "button": "Obuna bo'lish"
+    },
+    "copyright": "© 2023 O'zbekiston Turizmi. Barcha huquqlar himoyalangan."
+  }
+}

@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+
+{% block title %}UzbTour - {% trans "Discover Uzbekistan" %}{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop id="hero-video">
+                <source src="{% static 'videos/hero-video.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="container text-center">
+                <h1 data-aos="fade-up">{% trans "Discover Uzbekistan" %}</h1>
+                <p data-aos="fade-up" data-aos-delay="200">{% trans "Experience the beauty and culture of the Silk Road" %}</p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="{% url 'destinations:list' %}" class="btn btn-primary">{% trans "Explore Destinations" %}</a>
+                    <a href="{% url 'contact:contact' %}" class="btn btn-outline-light">{% trans "Contact Us" %}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title" data-aos="fade-up">{% trans "Welcome to Uzbekistan" %}</h2>
+                    <p class="section-description" data-aos="fade-up" data-aos-delay="100">
+                        {% trans "Uzbekistan is a country with a rich history, stunning architecture, and warm hospitality. From the ancient cities of Samarkand and Bukhara to the modern capital of Tashkent, Uzbekistan offers travelers a unique blend of cultural experiences." %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3>{% trans "Rich Cultural Heritage" %}</h3>
+                        <p>{% trans "Explore ancient cities that were once key stops on the Great Silk Road, with architecture dating back centuries." %}</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>{% trans "Authentic Experiences" %}</h3>
+                        <p>{% trans "Immerse yourself in local traditions, taste delicious cuisine, and interact with friendly locals." %}</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3>{% trans "Diverse Landscapes" %}</h3>
+                        <p>{% trans "From desert landscapes to mountain ranges, Uzbekistan offers a variety of natural wonders to explore." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="featured-destinations py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title" data-aos="fade-up">{% trans "Featured Destinations" %}</h2>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                {% for destination in featured_destinations %}
+                    <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'-1'|multiply:100 }}">
+                        <div class="destination-card">
+                            <div class="destination-image">
+                                <img src="{{ destination.image.url }}" alt="{{ destination.name }}">
+                                <div class="destination-overlay">
+                                    <a href="{% url 'destinations:detail' destination.slug %}" class="btn btn-sm btn-light">{% trans "Explore" %}</a>
+                                </div>
+                            </div>
+                            <div class="destination-content">
+                                <h3>{{ destination.name }}</h3>
+                                <span class="badge bg-primary">{{ destination.category.name }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="col-12 text-center">
+                        <p>{% trans "No featured destinations available." %}</p>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <a href="{% url 'destinations:list' %}" class="btn btn-primary">
+                        {% trans "View All Destinations" %} <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title" data-aos="fade-up">{% trans "What Our Travelers Say" %}</h2>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                {% for testimonial in testimonials %}
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:'-1'|multiply:100 }}">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">{{ testimonial.text }}</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    {{ testimonial.name|first }}
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>{{ testimonial.name }}</h4>
+                                    <p>{{ testimonial.country }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 data-aos="fade-up">{% trans "Ready to Explore Uzbekistan?" %}</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">{% trans "Book your tour today and experience the beauty and culture of the Silk Road." %}</p>
+                    <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                        <a href="{% url 'tours:list' %}" class="btn btn-primary">{% trans "Browse Tours" %}</a>
+                        <a href="{% url 'contact:contact' %}" class="btn btn-outline-light">{% trans "Contact Us" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
