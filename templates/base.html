@@ -60,18 +60,28 @@
         color: #0d9488 !important;
     }
 
-    @media (max-width: 991.98px) {
-      .navbar,
-      .navbar .collapse.show {
-        background-color: #fff !important;
-      }
-      .navbar .nav-link {
-        color: #000 !important;
-      }
-      .navbar .nav-link.active {
-        color: #0d9488 !important;
-      }
+  @media (max-width: 991.98px) {
+    .navbar,
+    .navbar .collapse.show,
+    .navbar .navbar-collapse {
+      background-color: #fff !important;
     }
+    .navbar .nav-link {
+      color: #000 !important;
+    }
+    .navbar .nav-link.active {
+      color: #0d9488 !important;
+      font-weight: bold;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .home-page .navbar .nav-link {
+      color: #000 !important;
+    }
+    .home-page .navbar .nav-link.active {
+      color: #0d9488 !important;
+    }
+  }
   </style>
 
   {% block extra_css %}{% endblock %}
