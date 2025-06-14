@@ -23,7 +23,7 @@ urlpatterns += i18n_patterns(
     path('gallery/', include('gallery.urls')),
     path('about/', include('about.urls')),
     path('contact/', include('contact.urls')),
-    prefix_default_language=False,
+    prefix_default_language=True,
 )
 
 # Serve media files in development
