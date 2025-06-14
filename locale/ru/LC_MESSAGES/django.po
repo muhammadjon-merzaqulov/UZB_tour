@@ -1,0 +1,464 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-15 02:29+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: about/models.py:7 destinations/models.py:8 destinations/models.py:20
+#: gallery/models.py:6 tours/models.py:8 tours/models.py:20
+msgid "Name"
+msgstr "Имя"
+
+msgid "Role"
+msgstr "Роль"
+
+msgid "Bio"
+msgstr "Биография"
+
+msgid "Image"
+msgstr "Изображение"
+
+msgid "Twitter"
+msgstr "Твиттер"
+
+msgid "LinkedIn"
+msgstr "Линкедин"
+
+msgid "Instagram"
+msgstr "Инстаграм"
+
+msgid "Order"
+msgstr "Порядок"
+
+msgid "Team Member"
+msgstr "Член команды"
+
+msgid "Team Members"
+msgstr "Члены команды"
+
+msgid "Year"
+msgstr "Год"
+
+msgid "Title"
+msgstr "Заголовок"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Company History"
+msgstr "История компании"
+
+msgid "Our Mission"
+msgstr "Наша миссия"
+
+msgid ""
+"To provide unforgettable travel experiences in Uzbekistan while promoting "
+"sustainable tourism and supporting local communities."
+msgstr "Предоставлять незабываемые путешествия по Узбекистану, продвигая устойчивый туризм и поддерживая местные сообщества."
+
+msgid "Our Vision"
+msgstr "Наше видение"
+
+msgid ""
+"To become the leading tourism company in Uzbekistan, known for exceptional "
+"service and authentic cultural experiences."
+msgstr "Стать ведущей туристической компанией Узбекистана, известной своим исключительным обслуживанием и подлинным культурным опытом."
+
+msgid "English"
+msgstr "Английский"
+
+msgid "Russian"
+msgstr "Русский"
+
+msgid "Uzbek"
+msgstr "Узбекский"
+
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+msgid "Full Name"
+msgstr "Полное имя"
+
+msgid "Email"
+msgstr "Электронная почта"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Message"
+msgstr "Сообщение"
+
+msgid "Created at"
+msgstr "Создано"
+
+msgid "Contact Message"
+msgstr "Контактное сообщение"
+
+msgid "Contact Messages"
+msgstr "Контактные сообщения"
+
+msgid "Question"
+msgstr "Вопрос"
+
+msgid "Answer"
+msgstr "Ответ"
+
+msgid "FAQ"
+msgstr "Часто задаваемые вопросы"
+
+msgid "FAQs"
+msgstr "Часто задаваемые вопросы"
+
+msgid "Your message has been sent successfully. We will contact you soon."
+msgstr "Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время."
+
+msgid "Sarah Johnson"
+msgstr "Сара Джонсон"
+
+msgid "United States"
+msgstr "Соединённые Штаты"
+
+msgid ""
+"Amazing experience in Uzbekistan! The tour was well organized, and the "
+"guides were knowledgeable and friendly."
+msgstr "Потрясающий опыт в Узбекистане! Тур был хорошо организован, а гиды — знающие и дружелюбные."
+
+msgid "Michael Chen"
+msgstr "Майкл Чен"
+
+msgid "Australia"
+msgstr "Австралия"
+
+msgid ""
+"The food in Uzbekistan was a highlight for me. The plov, samsa, and shashlik "
+"were all delicious!"
+msgstr "Еда в Узбекистане была для меня настоящим открытием. Плов, самса и шашлык были восхитительны!"
+
+msgid "Elena Petrova"
+msgstr "Елена Петрова"
+
+msgid "Russia"
+msgstr "Россия"
+
+msgid ""
+"Beautiful architecture and rich history. I especially loved Samarkand and "
+"Bukhara."
+msgstr "Красивая архитектура и богатая история. Особенно понравились Самарканд и Бухара."
+msgid "Slug"
+msgstr "Слаг"
+
+msgid "Destination Category"
+msgstr "Категория направления"
+
+msgid "Destination Categories"
+msgstr "Категории направлений"
+
+msgid "Category"
+msgstr "Категория"
+
+msgid "Featured"
+msgstr "Рекомендуемое"
+
+msgid "Updated at"
+msgstr "Обновлено"
+
+msgid "Destination"
+msgstr "Направление"
+
+msgid "Destinations"
+msgstr "Направления"
+
+msgid "Gallery Category"
+msgstr "Категория галереи"
+
+msgid "Gallery Categories"
+msgstr "Категории галереи"
+
+msgid "Gallery Image"
+msgstr "Изображение галереи"
+
+msgid "Gallery Images"
+msgstr "Изображения галереи"
+
+msgid "About Us"
+msgstr "О нас"
+
+msgid "About UzbTour"
+msgstr "О компании UzbTour"
+
+msgid "Our Team"
+msgstr "Наша команда"
+
+msgid "Meet the passionate individuals dedicated to making your Uzbekistan journey unforgettable."
+msgstr "Познакомьтесь с энтузиастами, делающими ваше путешествие по Узбекистану незабываемым."
+
+msgid "No team members found."
+msgstr "Члены команды не найдены."
+
+msgid "Our History"
+msgstr "Наша история"
+
+msgid "No history events found."
+msgstr "Исторические события не найдены."
+
+msgid "User Management"
+msgstr "Управление пользователями"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Create New Admin User"
+msgstr "Создать нового администратора"
+
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+msgid "Create User"
+msgstr "Создать пользователя"
+
+msgid "Existing Users"
+msgstr "Существующие пользователи"
+
+msgid "Staff Status"
+msgstr "Статус сотрудника"
+
+msgid "Superuser Status"
+msgstr "Статус суперпользователя"
+
+msgid "Date Joined"
+msgstr "Дата регистрации"
+
+msgid "Last Login"
+msgstr "Последний вход"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Edit"
+msgstr "Редактировать"
+
+msgid "Discover Uzbekistan"
+msgstr "Откройте для себя Узбекистан"
+
+msgid "Tours & Packages"
+msgstr "Туры и пакеты"
+
+msgid "Gallery"
+msgstr "Галерея"
+
+msgid "Contact"
+msgstr "Контакты"
+
+msgid "Discover the beauty and culture of Uzbekistan with our guided tours and travel packages."
+msgstr "Откройте для себя красоту и культуру Узбекистана с нашими экскурсионными турами и путешествиями."
+
+msgid "Quick Links"
+msgstr "Быстрые ссылки"
+
+msgid "Newsletter"
+msgstr "Новостная рассылка"
+
+msgid "Subscribe to our newsletter for the latest updates and offers."
+msgstr "Подпишитесь на рассылку, чтобы получать последние новости и предложения."
+
+msgid "Your email address"
+msgstr "Ваш адрес электронной почты"
+
+msgid "© 2023 Uzbekistan Tourism. All rights reserved."
+msgstr "© 2023 Туризм Узбекистана. Все права защищены."
+
+msgid "Contact Us"
+msgstr "Свяжитесь с нами"
+
+msgid "Contact UzbTour"
+msgstr "Контакты UzbTour"
+
+msgid "Send Us a Message"
+msgstr "Отправьте нам сообщение"
+
+msgid "Contact Information"
+msgstr "Контактная информация"
+
+msgid "Address"
+msgstr "Адрес"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Working Hours"
+msgstr "Часы работы"
+
+msgid "Find Us"
+msgstr "Найдите нас"
+
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+msgid "No FAQs found."
+msgstr "Вопросы не найдены."
+
+msgid "Experience the beauty and culture of the Silk Road"
+msgstr "Познайте красоту и культуру Шёлкового пути"
+
+msgid "Explore Destinations"
+msgstr "Изучить направления"
+
+msgid "Welcome to Uzbekistan"
+msgstr "Добро пожаловать в Узбекистан"
+
+msgid "Uzbekistan is a country with a rich history, stunning architecture, and warm hospitality..."
+msgstr "Узбекистан — страна с богатой историей, потрясающей архитектурой и тёплым гостеприимством..."
+
+msgid "Rich Cultural Heritage"
+msgstr "Богатое культурное наследие"
+
+msgid "Explore ancient cities..."
+msgstr "Исследуйте древние города..."
+
+msgid "Authentic Experiences"
+msgstr "Аутентичные впечатления"
+
+msgid "Immerse yourself in local traditions..."
+msgstr "Погрузитесь в местные традиции..."
+
+msgid "Diverse Landscapes"
+msgstr "Разнообразные пейзажи"
+
+msgid "From desert landscapes to mountain ranges..."
+msgstr "От пустынных пейзажей до горных хребтов..."
+
+msgid "Featured Destinations"
+msgstr "Популярные направления"
+
+msgid "Explore"
+msgstr "Изучить"
+
+msgid "No featured destinations available."
+msgstr "Популярные направления не найдены."
+
+msgid "View All Destinations"
+msgstr "Просмотреть все направления"
+
+msgid "What Our Travelers Say"
+msgstr "Отзывы путешественников"
+
+msgid "Ready to Explore Uzbekistan?"
+msgstr "Готовы исследовать Узбекистан?"
+
+msgid "Book your tour today and experience..."
+msgstr "Забронируйте тур уже сегодня и ощутите..."
+
+msgid "Browse Tours"
+msgstr "Посмотреть туры"
+
+msgid "Category:"
+msgstr "Категория:"
+
+msgid "Last Updated:"
+msgstr "Последнее обновление:"
+
+msgid "Back to Destinations"
+msgstr "Назад к направлениям"
+
+msgid "Destinations in Uzbekistan"
+msgstr "Направления в Узбекистане"
+
+msgid "All"
+msgstr "Все"
+
+msgid "Read More"
+msgstr "Читать далее"
+
+msgid "No destinations found."
+msgstr "Направления не найдены."
+
+msgid "Gallery of Uzbekistan"
+msgstr "Галерея Узбекистана"
+
+msgid "No images found."
+msgstr "Изображения не найдены."
+
+msgid "Duration:"
+msgstr "Продолжительность:"
+
+msgid "days"
+msgstr "дней"
+
+msgid "Price:"
+msgstr "Цена:"
+
+msgid "Highlights"
+msgstr "Основные моменты"
+
+msgid "Back to Tours"
+msgstr "Назад к турам"
+
+msgid "Tour Inquiry"
+msgstr "Запрос тура"
+
+msgid "Submit Inquiry"
+msgstr "Отправить запрос"
+
+msgid "Tours in Uzbekistan"
+msgstr "Туры по Узбекистану"
+
+msgid "Find your perfect Uzbekistan experience"
+msgstr "Найдите идеальный тур по Узбекистану"
+
+msgid "All Tours"
+msgstr "Все туры"
+
+msgid "View Details"
+msgstr "Посмотреть детали"
+
+msgid "Inquiry"
+msgstr "Запрос"
+
+msgid "No tours found."
+msgstr "Туры не найдены."
+
+msgid "Tour Category"
+msgstr "Категория тура"
+
+msgid "Tour Categories"
+msgstr "Категории туров"
+
+msgid "Price"
+msgstr "Цена"
+
+msgid "Duration (days)"
+msgstr "Продолжительность (дни)"
+
+msgid "Tour"
+msgstr "Тур"
+
+msgid "Tours"
+msgstr "Туры"
+
+msgid "Tour Inquiries"
+msgstr "Запросы туров"
+
+msgid "Your inquiry has been submitted successfully..."
+msgstr "Ваш запрос был успешно отправлен. Мы скоро с вами свяжемся."
+

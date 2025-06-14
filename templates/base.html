@@ -3,166 +3,221 @@
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}UzbTour - {% trans "Discover Uzbekistan" %}{% endblock %}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}UzbTour - {% trans "Discover Uzbekistan" %}{% endblock %}</title>
 
-    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+  <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar .nav-link {
+        transition: color 0.3s ease;
+    }
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    /* Navlink ranglari */
+    .home-page .navbar .nav-link {
+        color: #ffffff !important;
+    }
 
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    .home-page.scrolled .navbar .nav-link,
+    .inner-page .navbar .nav-link {
+        color: #000000 !important;
+    }
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    .navbar .nav-link.active {
+        color: #0d9488 !important;
+        font-weight: bold;
+        text-decoration: none !important;
+    }
 
-    {% block extra_css %}{% endblock %}
+    .home-page.scrolled .navbar .nav-link.active {
+        color: #0d9488 !important;
+    }
+
+    .navbar .nav-link:hover {
+        color: #0d9488 !important;
+    }
+
+    /* Dropdown - tillar */
+    .home-page .dropdown-menu {
+        background-color: #ffffff !important;
+    }
+
+    .home-page .dropdown-menu .dropdown-item {
+        color: #000000 !important;
+    }
+
+    .home-page .dropdown-menu .dropdown-item:hover {
+        background-color: transparent !important;
+        color: #0d9488 !important;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+        color: #0d9488 !important;
+    }
+  </style>
+
+  {% block extra_css %}{% endblock %}
 </head>
-<body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader">
-            <div class="loader-text">UzbTour</div>
-            <div class="loader-bar"></div>
-        </div>
+
+<body id="body" class="{% if request.resolver_match.url_name == 'home' %}home-page{% else %}inner-page{% endif %}">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader">
+      <div class="loader-text">UzbTour</div>
+      <div class="loader-bar"></div>
     </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'core:home' %}">UzbTour</a>
+  <!-- Navbar -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'core:home' %}">UzbTour</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.app_name == 'core' %}active{% endif %}" href="{% url 'core:home' %}">{% trans "Home" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.app_name == 'destinations' %}active{% endif %}" href="{% url 'destinations:list' %}">{% trans "Destinations" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.app_name == 'tours' %}active{% endif %}" href="{% url 'tours:list' %}">{% trans "Tours & Packages" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.app_name == 'gallery' %}active{% endif %}" href="{% url 'gallery:gallery' %}">{% trans "Gallery" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.app_name == 'about' %}active{% endif %}" href="{% url 'about:about' %}">{% trans "About Us" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.app_name == 'contact' %}active{% endif %}" href="{% url 'contact:contact' %}">{% trans "Contact" %}</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% if LANGUAGE_CODE == 'en' %}
-                                    🇬🇧 English
-                                {% elif LANGUAGE_CODE == 'ru' %}
-                                    🇷🇺 Русский
-                                {% elif LANGUAGE_CODE == 'uz' %}
-                                    🇺🇿 O'zbek
-                                {% endif %}
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                                <li><a class="dropdown-item" href="{% url 'core:set_language' 'en' %}">🇬🇧 English</a></li>
-                                <li><a class="dropdown-item" href="{% url 'core:set_language' 'ru' %}">🇷🇺 Русский</a></li>
-                                <li><a class="dropdown-item" href="{% url 'core:set_language' 'uz' %}">🇺🇿 O'zbek</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        {% if messages %}
-            <div class="container mt-5 pt-5">
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                        {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
-
-        {% block content %}{% endblock %}
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <h5 class="mb-3">UzbTour</h5>
-                    <p>{% trans "Discover the beauty and culture of Uzbekistan with our guided tours and travel packages." %}</p>
-                    <div class="social-icons">
-                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <h5 class="mb-3">{% trans "Quick Links" %}</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="{% url 'core:home' %}">{% trans "Home" %}</a></li>
-                        <li><a href="{% url 'destinations:list' %}">{% trans "Destinations" %}</a></li>
-                        <li><a href="{% url 'tours:list' %}">{% trans "Tours & Packages" %}</a></li>
-                        <li><a href="{% url 'gallery:gallery' %}">{% trans "Gallery" %}</a></li>
-                        <li><a href="{% url 'about:about' %}">{% trans "About Us" %}</a></li>
-                        <li><a href="{% url 'contact:contact' %}">{% trans "Contact" %}</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <h5 class="mb-3">{% trans "Contact" %}</h5>
-                    <address class="mb-0">
-                        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Tourism Street, Tashkent, Uzbekistan</p>
-                        <p><i class="fas fa-phone me-2"></i> +998 71 123 4567</p>
-                        <p><i class="fas fa-envelope me-2"></i> info@uzbtour.com</p>
-                    </address>
-                </div>
-
-                <div class="col-md-3 mb-4">
-                    <h5 class="mb-3">{% trans "Newsletter" %}</h5>
-                    <p>{% trans "Subscribe to our newsletter for the latest updates and offers." %}</p>
-                    <form class="newsletter-form">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="{% trans 'Your email address' %}">
-                            <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="border-top border-secondary mt-4 pt-4 text-center">
-                <p class="mb-0">{% trans "© 2023 Uzbekistan Tourism. All rights reserved." %}</p>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.app_name == 'core' %}active{% endif %}" href="{% url 'core:home' %}">{% trans "Home" %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.app_name == 'destinations' %}active{% endif %}" href="{% url 'destinations:list' %}">{% trans "Destinations" %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.app_name == 'tours' %}active{% endif %}" href="{% url 'tours:list' %}">{% trans "Tours & Packages" %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.app_name == 'gallery' %}active{% endif %}" href="{% url 'gallery:gallery' %}">{% trans "Gallery" %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.app_name == 'about' %}active{% endif %}" href="{% url 'about:about' %}">{% trans "About Us" %}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.app_name == 'contact' %}active{% endif %}" href="{% url 'contact:contact' %}">{% trans "Contact" %}</a>
+            </li>
+            <li class="nav-item dropdown">
+              <form action="{% url 'set_language' %}" method="post" id="language-form">
+                {% csrf_token %}
+                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown">
+                  {% if LANGUAGE_CODE == 'en' %}
+                    🇬🇧 English
+                  {% elif LANGUAGE_CODE == 'ru' %}
+                    🇷🇺 Русский
+                  {% elif LANGUAGE_CODE == 'uz' %}
+                    🇺🇿 O'zbek
+                  {% endif %}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                  <li><button class="dropdown-item" type="submit" name="language" value="en">🇬🇧 English</button></li>
+                  <li><button class="dropdown-item" type="submit" name="language" value="ru">🇷🇺 Русский</button></li>
+                  <li><button class="dropdown-item" type="submit" name="language" value="uz">🇺🇿 O'zbek</button></li>
+                </ul>
+              </form>
+            </li>
+          </ul>
         </div>
-    </footer>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Content -->
+  <main>
+    {% if messages %}
+      <div class="container mt-5 pt-5">
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
 
-    <!-- AOS Animation -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    {% block content %}{% endblock %}
+  </main>
 
-    <!-- Custom JS -->
-    <script src="{% static 'js/main.js' %}"></script>
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h5 class="mb-3">UzbTour</h5>
+          <p>{% trans "Discover the beauty and culture of Uzbekistan with our guided tours and travel packages." %}</p>
+          <div class="social-icons">
+            <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
 
-    {% block extra_js %}{% endblock %}
+        <div class="col-md-3 mb-4">
+          <h5 class="mb-3">{% trans "Quick Links" %}</h5>
+          <ul class="list-unstyled">
+            <li><a href="{% url 'core:home' %}">{% trans "Home" %}</a></li>
+            <li><a href="{% url 'destinations:list' %}">{% trans "Destinations" %}</a></li>
+            <li><a href="{% url 'tours:list' %}">{% trans "Tours & Packages" %}</a></li>
+            <li><a href="{% url 'gallery:gallery' %}">{% trans "Gallery" %}</a></li>
+            <li><a href="{% url 'about:about' %}">{% trans "About Us" %}</a></li>
+            <li><a href="{% url 'contact:contact' %}">{% trans "Contact" %}</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h5 class="mb-3">{% trans "Contact" %}</h5>
+          <address class="mb-0">
+            <p><i class="fas fa-map-marker-alt me-2"></i> 123 Tourism Street, Tashkent, Uzbekistan</p>
+            <p><i class="fas fa-phone me-2"></i> +998 71 123 4567</p>
+            <p><i class="fas fa-envelope me-2"></i> info@uzbtour.com</p>
+          </address>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h5 class="mb-3">{% trans "Newsletter" %}</h5>
+          <p>{% trans "Subscribe to our newsletter for the latest updates and offers." %}</p>
+          <form class="newsletter-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="{% trans 'Your email address' %}">
+              <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="border-top border-secondary mt-4 pt-4 text-center">
+        <p class="mb-0">{% trans "© 2023 Uzbekistan Tourism. All rights reserved." %}</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const body = document.getElementById("body");
+      if (body.classList.contains("home-page")) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            body.classList.add("scrolled");
+          } else {
+            body.classList.remove("scrolled");
+          }
+        });
+      }
+    });
+  </script>
+
+  {% block extra_js %}{% endblock %}
 </body>
 </html>

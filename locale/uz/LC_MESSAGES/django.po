@@ -1,0 +1,455 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-15 02:29+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: about/models.py:7 destinations/models.py:8 destinations/models.py:20
+#: gallery/models.py:6 tours/models.py:8 tours/models.py:20
+msgid "Name"
+msgstr "Ism"
+
+msgid "Role"
+msgstr "Vazifasi"
+
+msgid "Bio"
+msgstr "Biografiya"
+
+msgid "Image"
+msgstr "Rasm"
+
+msgid "Twitter"
+msgstr "Twitter"
+
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+msgid "Instagram"
+msgstr "Instagram"
+
+msgid "Order"
+msgstr "Tartib"
+
+msgid "Team Member"
+msgstr "Jamoa a’zosi"
+
+msgid "Team Members"
+msgstr "Jamoa a’zolari"
+
+msgid "Year"
+msgstr "Yil"
+
+msgid "Title"
+msgstr "Sarlavha"
+
+msgid "Description"
+msgstr "Tavsif"
+
+msgid "Company History"
+msgstr "Kompaniya tarixi"
+
+msgid "Our Mission"
+msgstr "Bizning missiyamiz"
+
+msgid ""
+"To provide unforgettable travel experiences in Uzbekistan while promoting "
+"sustainable tourism and supporting local communities."
+msgstr "Barqaror turizmni targ‘ib qilish va mahalliy jamoalarni qo‘llab-quvvatlash orqali O‘zbekistonda unutilmas sayohat tajribalarini taqdim etish."
+
+msgid "Our Vision"
+msgstr "Bizning maqsadimiz"
+
+msgid ""
+"To become the leading tourism company in Uzbekistan, known for exceptional "
+"service and authentic cultural experiences."
+msgstr "O‘zbekistonda yetakchi turizm kompaniyasiga aylanish – mukammal xizmat va chinakam madaniy tajriba bilan mashhur bo‘lish."
+
+msgid "English"
+msgstr "Inglizcha"
+
+msgid "Russian"
+msgstr "Ruscha"
+
+msgid "Uzbek"
+msgstr "O‘zbekcha"
+
+msgid "Send Message"
+msgstr "Xabar yuborish"
+
+msgid "Full Name"
+msgstr "To‘liq ismi"
+
+msgid "Email"
+msgstr "Elektron pochta"
+
+msgid "Subject"
+msgstr "Mavzu"
+
+msgid "Message"
+msgstr "Xabar"
+
+msgid "Created at"
+msgstr "Yaratilgan sana"
+
+msgid "Contact Message"
+msgstr "Bog‘lanish xabari"
+
+msgid "Contact Messages"
+msgstr "Bog‘lanish xabarlari"
+
+msgid "Question"
+msgstr "Savol"
+
+msgid "Answer"
+msgstr "Javob"
+
+msgid "FAQ"
+msgstr "Ko‘p so‘raladigan savol"
+
+msgid "FAQs"
+msgstr "Ko‘p so‘raladigan savollar"
+
+msgid "Your message has been sent successfully. We will contact you soon."
+msgstr "Xabaringiz muvaffaqiyatli yuborildi. Tez orada siz bilan bog‘lanamiz."
+
+msgid "Sarah Johnson"
+msgstr "Sara Jonson"
+
+msgid "United States"
+msgstr "Amerika Qo‘shma Shtatlari"
+
+msgid "Amazing experience in Uzbekistan! The tour was well organized, and the guides were knowledgeable and friendly."
+msgstr "O‘zbekistonda ajoyib tajriba! Sayohat yaxshi tashkil etilgan, gidlar bilimli va samimiy edi."
+
+msgid "Michael Chen"
+msgstr "Maykl Chen"
+
+msgid "Australia"
+msgstr "Avstraliya"
+
+msgid "The food in Uzbekistan was a highlight for me. The plov, samsa, and shashlik were all delicious!"
+msgstr "O‘zbekistondagi taomlar men uchun alohida ajralib turdi. Palov, somsa va shashlik juda mazali edi!"
+
+msgid "Elena Petrova"
+msgstr "Elena Petrova"
+
+msgid "Russia"
+msgstr "Rossiya"
+
+msgid "Beautiful architecture and rich history. I especially loved Samarkand and Bukhara."
+msgstr "Go‘zal arxitektura va boy tarix. Ayniqsa, Samarqand va Buxorani juda yoqtirdim."
+
+msgid "Slug"
+msgstr "Slug (havola uchun nom)"
+
+msgid "Destination Category"
+msgstr "Manzil toifasi"
+
+msgid "Destination Categories"
+msgstr "Manzil toifalari"
+
+msgid "Category"
+msgstr "Toifa"
+
+msgid "Featured"
+msgstr "Tanlangan"
+
+msgid "Updated at"
+msgstr "Yangilangan vaqt"
+
+msgid "Destination"
+msgstr "Manzil"
+
+msgid "Destinations"
+msgstr "Manzillar"
+
+msgid "Gallery Category"
+msgstr "Galereya toifasi"
+
+msgid "Gallery Categories"
+msgstr "Galereya toifalari"
+
+msgid "Gallery Image"
+msgstr "Galereya rasmi"
+
+msgid "Gallery Images"
+msgstr "Galereya rasmlari"
+msgid "About Us"
+msgstr "Biz haqimizda"
+
+msgid "About UzbTour"
+msgstr "UzbTour haqida"
+
+msgid "Our Team"
+msgstr "Bizning jamoamiz"
+
+msgid "Meet the passionate individuals dedicated to making your Uzbekistan journey unforgettable."
+msgstr "O'zbekiston safaringizni unutilmas qilishga bag'ishlangan fidoyi insonlar bilan tanishing."
+
+msgid "No team members found."
+msgstr "Jamoa a'zolari topilmadi."
+
+msgid "Our History"
+msgstr "Bizning tariximiz"
+
+msgid "No history events found."
+msgstr "Tarixiy voqealar topilmadi."
+
+msgid "User Management"
+msgstr "Foydalanuvchilar boshqaruvi"
+
+msgid "Home"
+msgstr "Bosh sahifa"
+
+msgid "Create New Admin User"
+msgstr "Yangi admin foydalanuvchi yaratish"
+
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+msgid "Password"
+msgstr "Parol"
+
+msgid "Password confirmation"
+msgstr "Parolni tasdiqlang"
+
+msgid "Create User"
+msgstr "Foydalanuvchi yaratish"
+
+msgid "Existing Users"
+msgstr "Mavjud foydalanuvchilar"
+
+msgid "Staff Status"
+msgstr "Xodim holati"
+
+msgid "Superuser Status"
+msgstr "Superuser holati"
+
+msgid "Date Joined"
+msgstr "Qo‘shilgan sana"
+
+msgid "Last Login"
+msgstr "Oxirgi kirish"
+
+msgid "Actions"
+msgstr "Amallar"
+
+msgid "Edit"
+msgstr "Tahrirlash"
+
+msgid "Discover Uzbekistan"
+msgstr "O'zbekistonni kashf eting"
+
+msgid "Tours & Packages"
+msgstr "Turlar va Paketlar"
+
+msgid "Gallery"
+msgstr "Galereya"
+
+msgid "Contact"
+msgstr "Bog'lanish"
+
+msgid "Discover the beauty and culture of Uzbekistan with our guided tours and travel packages."
+msgstr "O'zbekistondagi go‘zallik va madaniyatni bizning ekskursiyalarimiz va sayohat paketlarimiz orqali kashf eting."
+
+msgid "Quick Links"
+msgstr "Tez havolalar"
+
+msgid "Newsletter"
+msgstr "Yangiliklar byulleteni"
+
+msgid "Subscribe to our newsletter for the latest updates and offers."
+msgstr "So‘nggi yangiliklar va takliflar uchun byulletenimizga obuna bo‘ling."
+
+msgid "Your email address"
+msgstr "Sizning email manzilingiz"
+
+msgid "© 2023 Uzbekistan Tourism. All rights reserved."
+msgstr "© 2023 O'zbekiston Turizmi. Barcha huquqlar himoyalangan."
+
+msgid "Contact Us"
+msgstr "Biz bilan bog'laning"
+
+msgid "Contact UzbTour"
+msgstr "UzbTour bilan bog'lanish"
+
+msgid "Send Us a Message"
+msgstr "Bizga xabar yuboring"
+
+msgid "Contact Information"
+msgstr "Aloqa ma’lumotlari"
+
+msgid "Address"
+msgstr "Manzil"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Working Hours"
+msgstr "Ish vaqti"
+
+msgid "Find Us"
+msgstr "Bizni toping"
+
+msgid "Frequently Asked Questions"
+msgstr "Ko‘p so‘raladigan savollar"
+
+msgid "No FAQs found."
+msgstr "Hech qanday savollar topilmadi."
+
+msgid "Experience the beauty and culture of the Silk Road"
+msgstr "Ipak yo‘lining go‘zalligi va madaniyatini his eting"
+
+msgid "Explore Destinations"
+msgstr "Yo‘nalishlarni o‘rganing"
+
+msgid "Welcome to Uzbekistan"
+msgstr "O'zbekistonga xush kelibsiz"
+
+msgid "Uzbekistan is a country with a rich history, stunning architecture, and warm hospitality..."
+msgstr "O'zbekiston boy tarix, go'zal arxitektura va mehmondo‘stlikka ega mamlakatdir..."
+
+msgid "Rich Cultural Heritage"
+msgstr "Boy madaniy meros"
+
+msgid "Explore ancient cities that were once key stops on the Great Silk Road..."
+msgstr "Buyuk Ipak yo‘li bo‘ylab qadimiy shaharlarga sayohat qiling..."
+
+msgid "Authentic Experiences"
+msgstr "Haqiqiy tajribalar"
+
+msgid "Immerse yourself in local traditions, taste delicious cuisine..."
+msgstr "Mahalliy an’analarga sho‘ng‘ing, mazali taomlardan tatib ko‘ring..."
+
+msgid "Diverse Landscapes"
+msgstr "Turli xil manzaralar"
+
+msgid "From desert landscapes to mountain ranges..."
+msgstr "Cho‘l manzaralaridan tog‘ tizimalarigacha — O‘zbekistonning tabiati juda boy."
+
+msgid "Featured Destinations"
+msgstr "Tavsiya etilgan yo‘nalishlar"
+
+msgid "Explore"
+msgstr "O'rganing"
+
+msgid "No featured destinations available."
+msgstr "Tavsiya etilgan yo‘nalishlar mavjud emas."
+
+msgid "View All Destinations"
+msgstr "Barcha yo‘nalishlarni ko‘rish"
+
+msgid "What Our Travelers Say"
+msgstr "Sayohatchilarimiz fikri"
+
+msgid "Ready to Explore Uzbekistan?"
+msgstr "O'zbekistonga sayohat qilishga tayyormisiz?"
+
+msgid "Book your tour today and experience the beauty and culture..."
+msgstr "Bugunoq sayohatingizni bron qiling va Ipak yo‘li go‘zalligini his eting."
+
+msgid "Browse Tours"
+msgstr "Turlarni ko‘rib chiqing"
+
+msgid "Category:"
+msgstr "Kategoriya:"
+
+msgid "Last Updated:"
+msgstr "Oxirgi yangilanish:"
+
+msgid "Back to Destinations"
+msgstr "Yo‘nalishlarga qaytish"
+
+msgid "Destinations in Uzbekistan"
+msgstr "O'zbekistondagi yo‘nalishlar"
+
+msgid "All"
+msgstr "Barchasi"
+
+msgid "Read More"
+msgstr "Batafsil o'qish"
+
+msgid "No destinations found."
+msgstr "Hech qanday yo‘nalish topilmadi."
+
+msgid "Gallery of Uzbekistan"
+msgstr "O'zbekiston galereyasi"
+
+msgid "No images found."
+msgstr "Hech qanday rasm topilmadi."
+
+msgid "Duration:"
+msgstr "Davomiyligi:"
+
+msgid "days"
+msgstr "kun"
+
+msgid "Price:"
+msgstr "Narxi:"
+
+msgid "Highlights"
+msgstr "Asosiy nuqtalar"
+
+msgid "Back to Tours"
+msgstr "Turlarga qaytish"
+
+msgid "Tour Inquiry"
+msgstr "Tur bo‘yicha so‘rov"
+
+msgid "Submit Inquiry"
+msgstr "So‘rov yuborish"
+
+msgid "Tours in Uzbekistan"
+msgstr "O'zbekistondagi turlar"
+
+msgid "Find your perfect Uzbekistan experience"
+msgstr "Siz uchun eng mos O'zbekiston tajribasini toping"
+
+msgid "All Tours"
+msgstr "Barcha turlar"
+
+msgid "View Details"
+msgstr "Tafsilotlarni ko‘rish"
+
+msgid "Inquiry"
+msgstr "So‘rov"
+
+msgid "No tours found."
+msgstr "Turlar topilmadi."
+
+msgid "Tour Category"
+msgstr "Tur kategoriyasi"
+
+msgid "Tour Categories"
+msgstr "Tur kategoriyalari"
+
+msgid "Price"
+msgstr "Narx"
+
+msgid "Duration (days)"
+msgstr "Davomiyligi (kun)"
+
+msgid "Tour"
+msgstr "Tur"
+
+msgid "Tours"
+msgstr "Turlar"
+
+msgid "Tour Inquiries"
+msgstr "Turlar bo‘yicha so‘rovlar"
+
+msgid "Your inquiry has been submitted successfully. We will contact you soon."
+msgstr "So‘rovingiz muvaffaqiyatli yuborildi. Tez orada siz bilan bog‘lanamiz."
