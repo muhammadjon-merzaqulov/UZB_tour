@@ -1,0 +1,20 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Django secret, venv va baza fayllari
+.env
+.venv/
+*.sqlite3
+
+# OS files
+.DS_Store
+
+# Log files
+*.log
+
+# Media/static (kerak bo‘lsa)
+media/
+staticfiles/
