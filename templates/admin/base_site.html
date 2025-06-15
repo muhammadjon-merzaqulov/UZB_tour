@@ -1,0 +1,14 @@
+{% extends "admin/base.html" %}
+{% load i18n static %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">UzbTour Admin</a></h1>
+{% endblock %}
+
+{% block userlinks %}
+  {% if user.is_active and user.is_staff %}
+    <form id="logout-form" method="post" action="{% url 'admin:logout' %}" style="display:inline;">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-link" style="padding:0; color:inherit;">{% trans "Log out" %}</button>
+    </form>
+  {% endif %}
+{% endblock %}
