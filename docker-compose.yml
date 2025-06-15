@@ -4,6 +4,7 @@ services:
   web:
     build: .
     container_name: turizm_web
+    command: ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000"]
     ports:
       - "8000:8000"
     volumes:
@@ -13,4 +14,23 @@ services:
       - ./db.sqlite3:/app/db.sqlite3
     environment:
       - PYTHONUNBUFFERED=1
-    # Agar kerak bo‘lsa, custom envlar, va boshqalar
+    depends_on:
+      - redis
+
+  nginx:
+    image: nginx:latest
+    container_name: turizm_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./static:/app/static
+      - ./media:/app/media
+    depends_on:
+      - web
+
+  redis:
+    image: redis:alpine
+    container_name: turizm_redis
+    ports:
+      - "6379:6379"

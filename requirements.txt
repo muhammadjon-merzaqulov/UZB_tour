@@ -5,3 +5,5 @@ crispy-bootstrap5==2023.10
 django-modeltranslation==0.18.11
 django-ckeditor==6.7.0
 django-jazzmin==2.6.0
+django-redis
+gunicorn
