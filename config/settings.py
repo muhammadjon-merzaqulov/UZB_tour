@@ -108,6 +108,8 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'Asia/Tashkent'
+TIME_FORMAT = 'H:i'
+DATETIME_FORMAT = 'd-m-Y H:i'
 
 USE_I18N = True
 
