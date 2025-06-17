@@ -21,6 +21,6 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             cd /home/ubuntu/UZB_tour
-            git pull origin main
             docker-compose down
+            git pull origin main
             docker-compose up -d
