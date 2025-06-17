@@ -7,7 +7,7 @@ services:
     command: gunicorn config.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - .:/app
-      - ./static:/app/static
+      - ./staticfiles:/app/staticfiles         # staticlarni faqat staticfiles'ga map qilamiz
       - ./media:/app/media
     expose:
       - "8000"
@@ -27,11 +27,11 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf    # nginx config
-      - ./static:/app/static
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf  # nginx config
+      - ./staticfiles:/app/staticfiles                      # static mapping (NOT ./static)
       - ./media:/app/media
-      - ./certbot/conf:/etc/letsencrypt                      # letsencrypt certs
-      - ./certbot/www:/var/www/certbot                       # acme-challenge
+      - ./certbot/conf:/etc/letsencrypt                     # letsencrypt certs
+      - ./certbot/www:/var/www/certbot                      # acme-challenge
     depends_on:
       - web
 
