@@ -10,7 +10,18 @@ SECRET_KEY = 'django-insecure-your-secret-key-here'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["13.232.12.142", "localhost", "127.0.0.1", "muhammadjon.uz", "www.muhammadjon.uz"]
+ALLOWED_HOSTS = [
+    "muhammadjon.uz",
+    "www.muhammadjon.uz",
+    "13.232.12.142",    # agar IP orqali ham kirsangiz
+    "localhost",
+    "127.0.0.1"
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://muhammadjon.uz",
+    "https://www.muhammadjon.uz"
+]
 
 # Application definition
 INSTALLED_APPS = [
